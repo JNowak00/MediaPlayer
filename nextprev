@@ -1,0 +1,40 @@
+ @FXML
+       private void handlebtnPreviousVideo()
+    {
+        
+        mp.stop();
+        ArrayList<String> Playlist = new ArrayList<>(DB.SelectSQL("Select fldPlaylist From tblPlaylist"));
+        for(int i =count ; i>=0;i--){
+            if(i==0)
+            {
+                i=0;
+                count=0;
+            }
+            else{
+                count++;
+                Playlist.get(count);
+                String video = DB.Select SQL("Select fldVIDEOURL FROM TBLPLAYLIST WHERE FLDVIDEOURL = "+count+)
+                movie1 = new Media(new File(video).toURI().toString());
+                mp = new MediaPlayer(movie1);
+                mediaV.setMediaPlayer(mp);
+            }}}
+            @FXML
+       private void handlebtnNextVideo()
+    {   
+        mp.stop();
+        ArrayList<String> Playlist = new ArrayList<>(DB.SelectSQL("Select fldPlaylist From tblPlaylist"));
+        for(int i = 0; i<=10;i++){
+            if(i>10)
+            {
+                i=0;
+                count=0;
+            }
+            else{
+            count++;
+            Playlist.get(count);
+            String video = DB.Select SQL("Select fldVIDEOURL FROM TBLPLAYLIST WHERE FLDVIDEOURL = "+count+)
+            movie1 = new Media(new File(video).toURI().toString());
+            mp = new MediaPlayer(movie1);
+            mediaV.setMediaPlayer(mp);}
+        }
+    }
