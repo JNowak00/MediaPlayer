@@ -1,0 +1,34 @@
+SOURCE CODE
+
+First of all, we are starting with saving each URL of film as a String.
+URL’S are readed from database.
+
+Next Step is creating the movie file which will be used in the mediaplayer.
+There is just one movie file which is automaticly changed when user will pick a movie to play.
+
+Playlists names are collected from database so it can automaticly change whenever user wants to. Program saving it as a String and Putting on ListView.
+
+//NextFilm
+When the playlist is selected user can change videos by pressing buttons „Next/Previous Video”. By creating outside int called „count” we have a possibility to make a loop which switching a video and adding it to a count whenever user is pressing the NEXT VIDEO buton or decreasing when buton PREVIOUS Video was pressed.
+
+To get possibility of choosing video we make an loop which is searching  throught every film name. After that whenever user will pick a title in the ListView program check the name of the film and changing the Movieinto  the one that user has picked.
+
+
+
+
+
+
+
+
+
+5.	JavaFX INTRODUCTION.
+
+To make a decent looking movie player as a base we choose AnchorPane to which we pinned an TabPane. Each TabPane is named and has it own tab.
+First tab is an place where we can Choose Video and Playlist, and after that we can play, pause or stop a video.  Also we make buttons for changing the actual video, so whenever we are in the playlist we can swap videos by next or previos in the playlist.
+To make an First Tab as a base we choose SplitPane which we filled with two AnchorPane. It makes possibilities to create a good looking separate choosing an film or playlist and MediaPlayer with buttons.
+After that we again splited AnchorPane and filled it with two ListViews.
+It makes the GUI looks more clear for user. When user choose Film from the Film ListView he needs to confirm his choose by pressing the „Pick” Button on the bottom of Film ListView.
+Exactly the same scenario has place in the Playlist Listview. User needs to confirm that he is choosing playlist by pressing the buton.
+
+For Creating the playlist user need to name his playlist and after that he is able to choose what videos will be inside it.
+User gets an information that the playlist has been created and it automaticly shows up in the first tab.
