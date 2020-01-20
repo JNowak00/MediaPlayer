@@ -1,0 +1,8 @@
+ private void PlayPlaylist(){
+        ObservableList<String> playlistpick;
+        playlistpick = PlayListListView.getSelectionModel().getSelectedItems();
+        DB.selectSQL("SELECT FldUrl FROM TBLPLAYLIST WHERE FLDPLAYLISTNAME = " +playlistpick );
+        playlist.addAll(DB.getDisplayData);
+movie1= new Media(new File(playlist.get(count)).toURI().toString());
+mp = new MediaPlayer(movie1);
+mediaV.setMediaPlayer(mp);}
