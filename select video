@@ -1,0 +1,18 @@
+@FXML
+    private void handlebtnSelectVideo(){
+        System.out.println("selected");
+        mp.stop();
+        ObservableList<String> movies;
+        movies = FilmListView.getSelectionModel().getSelectedItems();
+        ArrayList<String> Playlist = new ArrayList<String>();
+        //Tutaj dodaj z bazy danych nazwe playlist
+        //Playlist.addAll()
+        DB.SelectSQL("Select From tblvideos where FLDFILMNAME = "+MOVIES)
+        String filmpath = DB.Getdisplaydata
+        for(String m:movies)
+       {
+               movie1 = new Media(new File(filmpath).toURI().toString());
+               mp = new MediaPlayer(movie1);
+               mediaV.setMediaPlayer(mp);
+           }
+       }
