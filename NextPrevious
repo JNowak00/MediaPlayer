@@ -1,0 +1,26 @@
+ @FXML
+       private void handlebtnPreviousVideo()
+    {
+        mp.stop();
+        for(int i = count; i<=0  ;i--)
+        {
+            count--;
+            if(btnPreviousVideo.isPressed())
+            {
+                break;
+            }
+        }
+            }
+            @FXML
+       private void handlebtnNextVideo()
+    {
+       mp.stop();
+        for(int i = count; i<playlist.size();i++)
+        {
+            count++;
+            if(btnNextVideo.isPressed()){
+                break;
+            }
+        }
+
+        }
